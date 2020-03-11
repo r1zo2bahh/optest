@@ -20,6 +20,3 @@ sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai
 
 # Change default theme
 sed -i 's/config internal themes/config internal themes\n    option Material  \"\/luci-static\/material\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
-
-# Remove bootstrap theme
-sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
