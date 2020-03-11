@@ -14,6 +14,3 @@ pushd package/community
 
 # Change timezone
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
-
-# Change default theme
-sed -i 's/config internal themes/config internal themes\n    option Material  \"\/luci-static\/material\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
