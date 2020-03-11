@@ -12,9 +12,6 @@
 mkdir package/community
 pushd package/community
 
-# Add luci-app-koolproxyR
-git clone https://github.com/Leo-Jo/luci-app-koolproxyR
-
 # Change timezone
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
