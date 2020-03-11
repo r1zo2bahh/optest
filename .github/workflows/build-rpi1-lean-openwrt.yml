@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build optest
+name: Build Raspberry Pi 1 Lean's OpenWrt
 
 on: 
   release:
@@ -15,7 +15,7 @@ on:
     branches: 
       - master
     paths:
-      - 'optest.config'
+      - 'rpi1-lean-openwrt.config'
   schedule:
     - cron: 0 18 * * *
 #  watch:
@@ -24,7 +24,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: optest.config
+  CONFIG_FILE: rpi1-lean-openwrt.config
   DIY_SH: lean-openwrt.sh
   FREE_UP_DISK: true
   SSH_ACTIONS: false
@@ -65,7 +65,7 @@ jobs:
     - name: Update Feeds
       run: |
        cd openwrt
-#       echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf.default
+       echo "src-git lienol https://github.com/Lienol/openwrt-package" >> feeds.conf.default
        ./scripts/feeds update -a
 
     - name: Install feeds
