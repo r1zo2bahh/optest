@@ -25,7 +25,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: rpi1-lean-openwrt.config
-  DIY_SH: lean-openwrt.sh
+#  DIY_SH: lean-openwrt.sh
   FREE_UP_DISK: true
   SSH_ACTIONS: false
   TZ: Asia/Shanghai
